@@ -28,7 +28,7 @@ class AlimentoController extends Controller
 
         Alimento::create($request->all());
 
-        return redirect()->route('alimentos.index')->with('sucesso', 'Alimento adicionado!');
+        return redirect()->route('alimentos.index')->with('sucesso', 'Alimento adicionado com sucesso!');
     }
 
     public function edit(Alimento $alimento)
@@ -46,13 +46,13 @@ class AlimentoController extends Controller
 
         $alimento->update($request->all());
 
-        return redirect()->route('alimentos.index')->with('sucesso', 'Alimento atualizado!');
+        return redirect()->route('alimentos.index')->with('sucesso', 'Alimento atualizado com sucesso!');
     }
 
     public function destroy(Alimento $alimento)
     {
         $alimento->delete();
 
-        return redirect()->route('alimentos.index')->with('sucesso', 'Alimento removido!');
+        return redirect()->route('alimentos.index')->with('sucesso', 'Alimento removido com sucesso!');
     }
 }
